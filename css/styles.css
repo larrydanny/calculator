@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: fantasy;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #dddddd, #999999);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #ffffff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.container > button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container > button.delete {
+  background-color: rgba(202, 63, 44, 0.7);
+}
+
+.container > button.operator {
+  background-color: rgba(187, 179, 70, 0.7);
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.input-screen {
+  grid-column: 1 / -1;
+  background-color: #000000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.input-screen .previous-input {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.5rem;
+}
+
+.input-screen .current-input {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
